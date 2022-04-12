@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from "react";
 import { Link, NavLink, useParams } from "react-router-dom";
 import { categories } from "../utils/data";
@@ -16,7 +18,7 @@ const notActiveStyles =
   "group hover:bg-red-400 w-24 min-w-[94px] h-28 cursor-pointer rounded-lg bg-cardColor shadow-lg flex flex-col gap-3 items-center justify-center duration-150 transition-all ease-in-out";
 
 const FoodMenuContainer = () => {
-  const [{ foodItems, cartItems, total }, dispatch] = useStateValue();
+  const [{ foodItems, cartItems }, dispatch] = useStateValue();
 
   const [cart, setCart] = useState([]);
   const [isLoading, setIsLoading] = useState(false);

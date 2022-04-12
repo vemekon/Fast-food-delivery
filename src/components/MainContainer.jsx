@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from "react";
 import Hero from "../img/hero.png";
 import { IoAlarm, IoAdd } from "react-icons/io5";
