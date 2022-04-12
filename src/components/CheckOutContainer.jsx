@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdOutlineKeyboardBackspace } from "react-icons/md";
 import { RiRefreshFill } from "react-icons/ri";
 import EmptyCart from "../img/emptyCart.svg";
@@ -18,7 +18,7 @@ const CheckOutContainer = ({ cartMenu, setCartMenu }) => {
     }, 0);
     setTot(totalPrice);
     console.log(tot);
-  }, [tot, flag, cartItems, dispatch, foodItems]);
+  }, [tot, flag, cartItems, dispatch, foodItems, total]);
 
   const clearCart = () => {
     dispatch({

@@ -1,4 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
+/* eslint-disable no-unused-vars */
+import React, { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Contact from "./components/Contact";
 import CreateItem from "./components/CreateItem";
@@ -7,7 +8,7 @@ import Header from "./components/Header";
 import MainContainer from "./components/MainContainer";
 import UserProfile from "./components/UserProfile";
 import { getAllFoodItems } from "./utils/firebaseFunctions";
-import { motion } from "framer-motion";
+//import { motion } from "framer-motion";
 import { actionType } from "./context/reducer";
 import { useStateValue } from "./context/StateProvider";
 
@@ -28,7 +29,7 @@ const App = () => {
 
   useEffect(() => {
     fetchFoodItems();
-  }, []);
+  });
 
   return (
     <div className="w-screen h-screen flex items-center justify-center relative overflow-hidden">
