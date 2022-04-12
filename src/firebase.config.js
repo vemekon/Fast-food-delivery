@@ -12,7 +12,7 @@ const firebaseConfig1 = {
   messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGIN_ID,
   appId: process.env.REACT_APP_FIREBASE_APPI_ID,
 };
-const firebaseConfig = {
+const firebaseConfig2 = {
   apiKey: "AIzaSyAfOQtASjCNvb-z5K57xn6inoFVCFNHSdQ",
   authDomain: "fruit-delivery-8b0f7.firebaseapp.com",
   databaseURL:
@@ -22,6 +22,17 @@ const firebaseConfig = {
   messagingSenderId: "912039851229",
   appId: "1:912039851229:web:6be3b24776cbb5fb739734",
   measurementId: "G-TVJ78Y3DKR",
+};
+const firebaseConfig = {
+  apiKey: "AIzaSyBzT06_S9LhLbFGmDgnlgW5Bf9P3qRFASw",
+  authDomain: "adwa-619ee.firebaseapp.com",
+  databaseURL:
+    "https://adwa-619ee-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "adwa-619ee",
+  storageBucket: "adwa-619ee.appspot.com",
+  messagingSenderId: "423007064814",
+  appId: "1:423007064814:web:896c2f5f8b1662560919ff",
+  measurementId: "G-PTM3PVF6RL",
 };
 
 const app = getApps.length > 0 ? getApp() : initializeApp(firebaseConfig);
