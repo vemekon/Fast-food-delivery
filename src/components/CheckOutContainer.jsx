@@ -16,7 +16,7 @@ const CheckOutContainer = ({ cartMenu, setCartMenu }) => {
     let totalPrice = cartItems.reduce(function (accumulator, item) {
       return accumulator + item.qty * item.price;
     }, 0);
-    setTot(totalPrice);
+    setTot(totalPrice.toFixed(2));
     console.log(tot);
   }, [tot, flag, cartItems, dispatch, foodItems, total]);
 
@@ -72,7 +72,7 @@ const CheckOutContainer = ({ cartMenu, setCartMenu }) => {
             <div className="w-full flex items-center justify-between">
               <p className="text-gray-200 text-xl font-semibold">Total</p>
               <p className="text-gray-200 text-xl font-semibold">
-                $ {tot + 2.5}
+                £ {tot + 2.5}
               </p>
             </div>
             {user ? (
