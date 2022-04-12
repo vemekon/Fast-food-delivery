@@ -1,4 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
+/* eslint-disable array-callback-return */
+import React, { useEffect, useState } from "react";
 import { BiMinus, BiPlus } from "react-icons/bi";
 import { AnimatePresence, motion } from "framer-motion";
 import { actionType } from "../context/reducer";
@@ -6,7 +7,7 @@ import { useStateValue } from "../context/StateProvider";
 let items = [];
 
 const CartItemCard = ({ item, setFlag, flag }) => {
-  const [{ cartItems, total }, dispatch] = useStateValue();
+  const [{ cartItems }, dispatch] = useStateValue();
   const [qty, setQty] = useState(item.qty);
 
   const cartDispatch = () => {
@@ -18,8 +19,9 @@ const CartItemCard = ({ item, setFlag, flag }) => {
   };
 
   const updateQty = (action, id) => {
-    if (action == "add") {
+    if (action === "add") {
       setQty(qty + 1);
+      // eslint-disable-next-line array-callback-return
       cartItems.map((item) => {
         if (item.id === id) {
           item.qty += 1;
@@ -29,7 +31,7 @@ const CartItemCard = ({ item, setFlag, flag }) => {
       cartDispatch();
     } else {
       // initial state value is one so you need to check if 1 then remove it
-      if (qty == 1) {
+      if (qty === 1) {
         items = cartItems.filter((item) => item.id !== id);
         setFlag(flag + 1);
         cartDispatch();
@@ -48,7 +50,7 @@ const CartItemCard = ({ item, setFlag, flag }) => {
 
   useEffect(() => {
     items = cartItems;
-  }, [qty, items]);
+  }, [qty, cartItems]);
 
   return (
     <AnimatePresence>

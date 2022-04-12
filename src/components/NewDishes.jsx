@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from "react";
 import { IoAdd } from "react-icons/io5";
 import { AnimatePresence, motion } from "framer-motion";
